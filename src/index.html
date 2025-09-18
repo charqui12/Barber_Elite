@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Web Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- barra de navegacion, con todas las opcionesw--> 
+ <!-- -->
+ 
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/img1.jpg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top me-2">
+      Elite Barber
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="galeria.html">Galería</a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link" href="Testimonios.html">Testimonios</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#appointment">Cita</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!--encabezado-->
+
+<section id="home" class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">El Estilo Que Mereces lo tenemos nosotros </h1>
+                <p class="lead mb-4">Más de 15 años creando looks únicos. Cortes clásicos y modernos con la mejor atención personalizada.</p>
+               <div class="d-flex gap-3">
+  <!-- Botón que abre el modal de cita -->
+  <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalCita">
+    Reservar Cita
+  </a>
+  <!-- Botón que abre el modal de servicios -->
+  <a href="#" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#modalServicios">
+    Ver Servicios
+  </a>
+</div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-stats mt-5">
+                    <div class="row">
+                        <div class="col-4">
+                            <h3 class="display-6 text-warning fw-bold" id="counter1">200</h3>
+                            <p>Clientes Satisfechos</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="display-6 text-warning fw-bold" id="counter2">15</h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="display-6 text-warning fw-bold" id="counter3">7</h3>
+                            <p>Premios Ganados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<h4 class="text-center">Servicios</h4>
+
+  <div class="container my-5">
+  <div class="row g-3">
+    <!-- Card 1 -->
+   <div class="col-md-4">
+  <div class="card h-100">
+    <!-- Imagen ocupa todo el ancho -->
+    <img src="img/images3.jpg" class="card-img-top" alt="...">
+
+    <!-- Contenido debajo -->
+    <div class="card-body">
+      <h5 class="card-title"> # Corte de cabello normal</h5>
+      <p class="card-text">
+       el mejor corte de cabello al mejor precio
+      </p>
+      <a href="#" class="btn btn-primary">Ver precio</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Card 2 -->
+     <div class="col-md-4">
+  <div class="card h-90">
+    <!-- Imagen ocupa todo el ancho -->
+    <img src="img/barba.webp" class="card-img-top" alt="...">
+
+    <!-- Contenido debajo -->
+    <div class="card-body">
+      <h5 class="card-title"> # Arreglo de barba </h5>
+      <p class="card-text">
+       el mejor arreglo de barba al mejor precio
+      </p>
+      <a href="#" class="btn btn-primary">Ver precio</a>
+    </div>
+  </div>
+</div>
+
+
+
+      <!-- Card 3 -->
+     <div class="col-md-4">
+  <div class="card h-90">
+    <!-- Imagen ocupa todo el ancho -->
+    <img src="img/facial.webp" class="card-img-top" alt="...">
+
+    <!-- Contenido debajo -->
+    <div class="card-body">
+      <h5 class="card-title"> # Limpieza facial </h5>
+      <p class="card-text">
+        la mejor limpieza facial al mejor precio 
+      </p>
+      <a href="#" class="btn btn-primary">Ver precio </a>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+ 
+
+
+
+    <!-- Modal Reservar Cita -->
+<div class="modal fade" id="modalCita" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reservar Cita</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+       
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre">
+          </div>
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="fecha">
+          </div>
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ver Servicios -->
+<div class="modal fade" id="modalServicios" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nuestros Servicios</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Corte de Cabello</li>
+          <li>Afeitado Clásico</li>
+          <li>Arreglo de Barba</li>
+          <li>Tratamientos Capilares</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

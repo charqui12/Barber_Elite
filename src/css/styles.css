@@ -1,0 +1,170 @@
+
+/* Variables de color */
+:root {
+    --primary-color: #c9a96e;
+    --dark-color: #2c1810;
+    --light-color: #f8f5f0;
+}
+
+/* Estilo base para todos los bodies */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Estilos específicos por página */
+body.pagina-inicio {
+    background-color: var(--light-color);
+}
+
+body.pagina-Testimonios {
+    background-color: var(--primary-color);
+}
+
+body.pagina-galeria {
+    background-color: var(--primary-color); /* o cualquier color que quieras para esa página */
+   font-family: 'Georgia', serif;
+}
+
+.navbar-brand h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2rem; /* ajusta tamaño */
+    margin: 0;
+    color: var(--dark-color);
+    text-align: center;
+}
+.card {
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1 1 200px;
+    color: var(--dark-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Aplica la tipografía al navbar y al h1 */
+.navbar-brand h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2rem; /* ajusta tamaño */
+    margin: 0;
+    color: var(--light-color);
+    text-align: center;
+}
+
+ .carousel-item img {
+    height: 250px;       /* ajusta la altura del carrusel */
+    object-fit: contain; /* la imagen se ve completa */
+    background-color: #000; /* opcional: color de fondo para que no se vea vacío */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color) !important;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(44, 24, 16, 0.8), rgba(44, 24, 16, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23c9a96e" width="1200" height="800"/><rect fill="%232c1810" x="0" y="0" width="400" height="800" opacity="0.3"/><circle fill="%23f8f5f0" cx="600" cy="400" r="50" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--dark-color);
+            font-weight: bold;
+        }
+        
+        .btn-primary:hover {
+            background-color: #b8956b;
+            border-color: #b8956b;
+        }
+        
+        .section-title {
+            color: var(--dark-color);
+            margin-bottom: 3rem;
+            font-weight: bold;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .price-card {
+            background: linear-gradient(135deg, var(--dark-color), #3d2817);
+            color: white;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .gallery-img {
+            height: 250px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .testimonial-card {
+            background: var(--light-color);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .social-icons a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: white;
+        }
+        
+        .appointment-form {
+            background: rgba(201, 169, 110, 0.1);
+            border-radius: 15px;
+        }
+
+        .card-img-top {
+  height: 200px;   
+  object-fit: cover;
+}
+
+   
