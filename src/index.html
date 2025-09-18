@@ -12,6 +12,8 @@
 <!-- barra de navegacion, con todas las opcionesw--> 
  <!-- -->
  
+
+
        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
@@ -32,8 +34,11 @@
          <li class="nav-item">
           <a class="nav-link" href="Testimonios.html">Testimonios</a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#appointment">Cita</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+       
+        <li class="nav-item">
+  <a class="nav-link" href="contactos.html">Contacto</a>
+</li>
+
       </ul>
     </div>
   </div>
@@ -171,13 +176,23 @@
         <form>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre">
+            <input type="text" class="form-control" id="nombre" required>
           </div>
           <div class="mb-3">
             <label for="fecha" class="form-label">Fecha</label>
-            <input type="date" class="form-control" id="fecha">
+            <input type="date" class="form-control" id="fecha" required>
           </div>
+
+          <div class="mb-3">
+  <label for="mensaje" class="form-label">Comentario (opcional)</label>
+  <textarea class="form-control" id="mensaje" rows="2" placeholder="Ej: Prefiero corte a las 5 PM"></textarea>
+</div>
+
           <button type="submit" class="btn btn-primary">Confirmar</button>
+          <div id="alerta" class="alert alert-success d-none" role="alert">
+  ¡Cita reservada con éxito!
+</div>
+
         </form>
       </div>
     </div>
@@ -186,23 +201,52 @@
 
 <!-- Modal Ver Servicios -->
 <div class="modal fade" id="modalServicios" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Nuestros Servicios</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header bg-dark text-white rounded-top-4">
+        <h5 class="modal-title fw-bold">💈 Nuestros Servicios</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
-      <div class="modal-body">
-        <ul>
-          <li>Corte de Cabello</li>
-          <li>Afeitado Clásico</li>
-          <li>Arreglo de Barba</li>
-          <li>Tratamientos Capilares</li>
-        </ul>
+      <div class="modal-body p-4">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 text-center">
+              <div class="card-body">
+                <h6 class="card-title fw-bold"> Corte de Cabello</h6>
+                <p class="card-text text-muted">Estilo clásico o moderno, adaptado a tu gusto.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 text-center">
+              <div class="card-body">
+                <h6 class="card-title fw-bold"> Afeitado Clásico</h6>
+                <p class="card-text text-muted">Afeitado con toalla caliente y productos premium.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 text-center">
+              <div class="card-body">
+                <h6 class="card-title fw-bold"> Arreglo de Barba</h6>
+                <p class="card-text text-muted">Perfilado profesional y cuidado de la barba.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 text-center">
+              <div class="card-body">
+                <h6 class="card-title fw-bold"> Tratamientos Capilares</h6>
+                <p class="card-text text-muted">Hidratación, reparación y cuidado de tu cabello.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
