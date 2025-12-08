@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Barber</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/img1.jpg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top me-2">
+      Elite Barber
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="Testimonios.html">Testimonios</a></li>
+        <li class="nav-item">
+            <a class="nav-link" href="contactos.html" id="btnContacto">Contacto</a>
+        </li>
+
+
+   
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero pt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">El Estilo Que Mereces lo tenemos nosotros</h1>
+                <p class="lead mb-4">Más de 15 años creando looks únicos. Cortes clásicos y modernos con la mejor atención personalizada.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalCita">
+                        Reservar Cita
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#modalServicios">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-stats mt-5">
+                    <div class="row">
+                        <div class="col-4">
+                            <h3 class="display-6 text-warning fw-bold" id="counter1">200</h3>
+                            <p>Clientes Satisfechos</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="display-6 text-warning fw-bold" id="counter2">15</h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="display-6 text-warning fw-bold" id="counter3">7</h3>
+                            <p>Premios Ganados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Servicios -->
+<h4 class="text-center mt-5">Servicios</h4>
+<div class="container my-5">
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="img/images3.jpg" class="card-img-top" alt="Corte de cabello">
+        <div class="card-body">
+          <h5 class="card-title">Corte de cabello normal</h5>
+          <p class="card-text">El mejor corte de cabello al mejor precio</p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPrecios" data-ninos="100" data-adulto="200">Ver precio</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="img/barba.webp" class="card-img-top" alt="Arreglo de barba">
+        <div class="card-body">
+          <h5 class="card-title">Arreglo de barba</h5>
+          <p class="card-text">El mejor arreglo de barba al mejor precio</p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPrecios" data-ninos="0" data-adulto="150">Ver precio</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="img/facial.webp" class="card-img-top" alt="Limpieza facial">
+        <div class="card-body">
+          <h5 class="card-title">Limpieza facial</h5>
+          <p class="card-text">La mejor limpieza facial al mejor precio</p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPrecios" data-ninos="50" data-adulto="100">Ver precio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Reservar Cita -->
+<div class="modal fade" id="modalCita" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reservar Cita</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form action="../backend/reservar_cita.php" method="POST">
+
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" required>
+          </div>
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha y hora</label>
+            <input type="datetime-local" class="form-control" id="fecha" name="fecha" required>
+          </div>
+          <div class="mb-3">
+            <label for="servicio" class="form-label">Servicio</label>
+            <select class="form-select" id="servicio" name="servicio" required>
+              <option value="" selected disabled>Selecciona un servicio</option>
+              <option value="Corte de Cabello">Corte de Cabello</option>
+              <option value="Arreglo de Barba">Arreglo de Barba</option>
+              <option value="Limpieza Facial">Limpieza Facial</option>
+              <option value="Tratamientos Capilares">Tratamientos Capilares</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Servicios -->
+<div class="modal fade" id="modalServicios" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nuestros Servicios</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Corte de Cabello</li>
+          <li>Afeitado Clásico</li>
+          <li>Arreglo de Barba</li>
+          <li>Tratamientos Capilares</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Precios -->
+<div class="modal fade" id="modalPrecios" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Precios del Servicio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Niños: <strong id="precioNinos"></strong></p>
+        <p>Adulto: <strong id="precioAdulto"></strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // JavaScript para modal de precios
+  var modalPrecios = document.getElementById('modalPrecios');
+  modalPrecios.addEventListener('show.bs.modal', function (event) {
+    var button = event.relatedTarget;
+    var precioNinos = button.getAttribute('data-ninos');
+    var precioAdulto = button.getAttribute('data-adulto');
+
+    var modalPrecioNinos = modalPrecios.querySelector('#precioNinos');
+    var modalPrecioAdulto = modalPrecios.querySelector('#precioAdulto');
+
+    modalPrecioNinos.textContent = precioNinos + " MXN";
+    modalPrecioAdulto.textContent = precioAdulto + " MXN";
+  });
+
+
+</script>
+
+
+<script>
+document.getElementById("btnContacto").addEventListener("click", function (e) {
+    e.preventDefault(); 
+
+    fetch("contactos.html")
+        .then(resp => {
+            if (resp.ok) {
+                console.log("Ruta encontrada");
+                window.location.href = "contactos.html"; 
+            } else {
+                console.warn("Ruta no encontrada");
+                alert("La página de contacto no existe (error lógico en la ruta).");
+            }
+        })
+        .catch(() => {
+            console.error("Ruta no encontrada (servidor no responde)");
+        });
+});
+</script>
+
+
+
+
+
+<script src="js/main.js"></script>
+
+
+
+</body>
+</html>
